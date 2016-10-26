@@ -11,6 +11,7 @@
 
 (function() {
   'use strict';
-
-  window.location = 'https://mobile.twitter.com' + window.location.pathname
+  var path = window.location.pathname;
+  if (path === '/oauth/authenticate') return;
+  window.location = 'https://mobile.twitter.com' + path;
 })();
